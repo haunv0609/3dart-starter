@@ -19,9 +19,9 @@ class StarterServiceProvider extends ServiceProvider {
             __DIR__.'/config/starter.php' => config_path('starter.php'),
         ], 'starter-config');
 
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
-        $this->loadRoutesFrom(__DIR__.'/../routes/starter.php');
+        $this->loadRoutesFrom(__DIR__.'/routes/starter.php');
     }
     public function register()
     {

@@ -1,0 +1,36 @@
+{
+    "name": "haunv/3dart-starter",
+    "description": "packages starter in all project of 3DART",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "Haunv\\3dartStarter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nguyễn Văn Hậu",
+            "email": "tiendat141296@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "spatie/laravel-permission": "^6.0",
+        "mckenziearts/laravel-notify": "^2.5",
+        "unisharp/laravel-filemanager": "^2.9",
+        "diglactic/laravel-breadcrumbs": "^9.0",
+        "haruncpi/laravel-user-activity": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "haunv\\Starter\\StarterServiceProvider"
+            ],
+            "publish": {
+                "haunv-starter-routes": {
+                    "src/routes/starter.php": "routes/starter.php"
+                }
+            }
+        }
+    }
+}

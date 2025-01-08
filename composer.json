@@ -25,7 +25,12 @@
         "laravel": {
             "providers": [
                 "haunv\\artStarter\\StarterServiceProvider"
-            ]
+            ],
+            "publish": {
+                "haunv-starter-routes": {
+                    "src/routes/starter.php": "routes/starter.php"
+                }
+            }
         }
     }
 }

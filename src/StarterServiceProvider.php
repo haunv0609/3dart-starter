@@ -16,7 +16,7 @@ class StarterServiceProvider extends ServiceProvider {
         $this->registerMiddleware();
 
         $this->publishes([
-            __DIR__.'/../config/starter.php' => config_path('starter.php'),
+            __DIR__.'/config/starter.php' => config_path('starter.php'),
         ], 'starter-config');
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
@@ -26,7 +26,7 @@ class StarterServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/starter.php', 'starter'
+            __DIR__.'/config/starter.php', 'starter'
         );
     }
 

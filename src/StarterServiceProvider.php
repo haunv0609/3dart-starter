@@ -33,7 +33,7 @@ class StarterServiceProvider extends ServiceProvider {
     protected function registerMiddleware()
     {
         $router = $this->app->make(Router::class);
-        $router->aliasMiddleware('permission', \haunv\Starter\Http\Middleware\PermissionMiddleware::class);
+        $router->aliasMiddleware('permission', \haunv\artStarter\Http\Middleware\PermissionMiddleware::class);
         $router->aliasMiddleware('role', RoleMiddleware::class);
         $router->aliasMiddleware('role_or_permission', RoleOrPermissionMiddleware::class);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace haunv\Starter\Http\Middleware;
+namespace haunv\artStarter\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

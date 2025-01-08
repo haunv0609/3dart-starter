@@ -1,6 +1,6 @@
 <?php
 
-namespace haunv\Starter;
+namespace haunv\artStarter;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

@@ -1,10 +1,10 @@
 {
-    "name": "haunv/3dart-starter",
+    "name": "haunv/art-starter",
     "description": "packages starter in all project of 3DART",
     "version": "0.0.1",
     "autoload": {
         "psr-4": {
-            "Haunv\\3dartStarter\\": "src/"
+            "Haunv\\artStarter\\": "src/"
         }
     },
     "authors": [
@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "haunv\\Starter\\StarterServiceProvider"
+                "haunv\\artStarter\\StarterServiceProvider"
             ],
             "publish": {
                 "haunv-starter-routes": {

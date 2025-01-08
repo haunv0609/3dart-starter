@@ -1,5 +1,5 @@
 <?php
-namespace haunv\Starter;
+namespace haunv\artStarter;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;

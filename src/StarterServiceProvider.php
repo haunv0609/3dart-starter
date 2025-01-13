@@ -16,7 +16,7 @@ use Illuminate\Support\Collection;
 class StarterServiceProvider extends ServiceProvider {
     public function boot()
     {
-        $this->laravelPermission();
+
 
         $this->app->register(PermissionServiceProvider::class);
         $this->app->register(LaravelNotifyServiceProvider::class);
@@ -30,7 +30,7 @@ class StarterServiceProvider extends ServiceProvider {
 
         $this->loadRoutesFrom(__DIR__.'/routes/starter.php');
 
-        // $this->harumcpi();
+        $this->harumcpi();
         $this->laravelNotify();
         $this->filemanager();
         $this->configBreadcrumbs();

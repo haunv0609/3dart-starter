@@ -1,5 +1,7 @@
 <?php
 
+Route::get('cdn/{path}', [\haunv\artStarter\Http\Controllers\ImageController::class, 'show'])->where('path', '.*');
+
 // Route::group([
 //     'namespace' => '\Haunv\3dartStarter\Controllers',
 //     'middleware' => config('starter.middleware'),

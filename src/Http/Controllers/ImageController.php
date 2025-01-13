@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use League\Glide\Responses\SymfonyResponseFactory;
 use League\Glide\ServerFactory;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use App\Http\Controllers\Controller;
 
 class ImageController extends Controller
 {

@@ -61,7 +61,7 @@ class StarterServiceProvider extends ServiceProvider {
         ], 'starter-config');
 
         $this->publishes([
-            __DIR__.'../database/migrations/add_description_to_permissions_and_role_tables.php.stub' => $this->getMigrationFileName('add_description_to_permissions_and_role_tables.php'),
+            __DIR__.'/../database/migrations/add_description_to_permissions_and_role_tables.php.stub' => $this->getMigrationFileName('add_description_to_permissions_and_role_tables.php'),
         ], 'permission-description');
 
         $this->publishes([

@@ -86,7 +86,7 @@ class StarterServiceProvider extends ServiceProvider {
 
     public function harumcpi()
     {
-        Artisan::call('php artisan user-activity:install');
+        Artisan::call('auser-activity:install');
     }
 
     public function laravelPermission()

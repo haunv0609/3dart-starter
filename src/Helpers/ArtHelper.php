@@ -2,7 +2,7 @@
 
 function image(string $path, int $width, int $height): string {
 
-    $data = app(\App\Service\ImagePathGenerator::class)->generate($path, $width, $height);
+    $data = app(\haunv\artStarter\Service\ImagePathGenerator::class)->generate($path, $width, $height);
 
     return $data;
 }

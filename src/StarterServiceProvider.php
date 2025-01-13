@@ -10,6 +10,8 @@ use Spatie\Permission\Middleware\RoleOrPermissionMiddleware;
 use Mckenziearts\Notify\LaravelNotifyServiceProvider;
 use eloquentFilter\ServiceProvider as FilterService;
 use eloquentFilter\Facade\EloquentFilter;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Collection;
 
 class StarterServiceProvider extends ServiceProvider {
     public function boot()

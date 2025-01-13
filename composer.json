@@ -5,7 +5,11 @@
     "autoload": {
         "psr-4": {
             "Haunv\\artStarter\\": "src/"
-        }
+        },
+
+        "files": [
+            "src/Helpers/ArtHelper.php"
+        ]
     },
     "authors": [
         {
@@ -15,11 +19,14 @@
     ],
     "require": {
         "php": "^8.2",
+        "league/glide-symfony": "^2.0",
         "spatie/laravel-permission": "^6.0",
         "mckenziearts/laravel-notify": "^2.5",
         "unisharp/laravel-filemanager": "^2.9",
         "diglactic/laravel-breadcrumbs": "^9.0",
-        "haruncpi/laravel-user-activity": "^1.0"
+        "haruncpi/laravel-user-activity": "^1.0",
+        "mehdi-fathi/eloquent-filter": "^4.4"
+
     },
     "extra": {
         "laravel": {

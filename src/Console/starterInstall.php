@@ -19,8 +19,14 @@ class starterInstall extends Command
         $this->filemanagerConfig();
         $this->filemanagerPublic();
         $this->configBreadcrumbs();
+        $this->haruncpi();
 
         $this->info('starter config published successfully.');
+    }
+
+    private function haruncpi()
+    {
+        $this->call('user-activity:install');
     }
 
     private function laravelPermission()

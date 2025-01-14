@@ -3,6 +3,7 @@
 namespace haunv\artStarter\Console;
 
 use Illuminate\Console\Command;
+use haunv\artStarter\StarterServiceProvider;
 
 class starterInstall extends Command
 {
@@ -73,7 +74,7 @@ class starterInstall extends Command
     private function publishPackage()
     {
         $this->call('vendor:publish', [
-            '--provider'    => 'haunv\artStarter\ArtStarterServiceProvider',
+            '--provider'    => 'haunv\artStarter\StarterServiceProvider',
             '--force'       => true
         ]);
     }

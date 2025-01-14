@@ -1,7 +1,6 @@
 {
     "name": "haunv/art-starter",
     "description": "packages starter in all project of 3DART",
-    "version": "0.0.1",
     "autoload": {
         "psr-4": {
             "Haunv\\artStarter\\": "src/"

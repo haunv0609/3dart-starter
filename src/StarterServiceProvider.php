@@ -53,16 +53,28 @@ class StarterServiceProvider extends ServiceProvider {
     public function publishing(): void
     {
         $this->publishes([
-            __DIR__.'/config/starter.php' => config_path('starter.php'),
-        ], 'starter-config');
-
-        $this->publishes([
             __DIR__.'/../database/migrations/add_description_to_permissions_and_role_tables.php.stub' => $this->getMigrationFileName('add_description_to_permissions_and_role_tables.php'),
         ], 'permission-description');
 
         $this->publishes([
             __DIR__.'/routes/breadcrumbs.php' => base_path('routes/breadcrumbs.php'),
         ], 'laravel-breadcrumbs');
+
+        $this->publishes([
+            __DIR__.'/Http/Controllers/PermissionController.php.haunv' => base_path('app/Http/Controllers/Admin/PermissionController.php'),
+        ], 'controller-permission');
+
+        $this->publishes([
+            __DIR__.'/Http/Controllers/RoleController.php.haunv' => base_path('app/Http/Controllers/Admin/RoleController.php'),
+        ], 'controller-role');
+
+        $this->publishes([
+            __DIR__.'/routes/admin.php.haunv' => base_path('routes/admin.php'),
+        ], 'admin-routes');
+
+        $this->publishes([
+            __DIR__.'/../../resources/views' => resource_path('views/admin/'),
+        ], "pr-views");
     }
 
         /**

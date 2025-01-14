@@ -8,19 +8,48 @@ use Diglactic\Breadcrumbs\Breadcrumbs;
 //  with `$trail`. This is nice for IDE type checking and completion.
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 
-// // Home
+// // Trang chủ
 // Breadcrumbs::for('home', function (BreadcrumbTrail $trail) {
-//     $trail->push('Home', route('home'));
+//     $trail->push('Trang chủ', route('home'));
 // });
 
-// // Home > Blog
-// Breadcrumbs::for('blog', function (BreadcrumbTrail $trail) {
-//     $trail->parent('home');
-//     $trail->push('Blog', route('blog'));
+// Quản lý vai trò
+Breadcrumbs::for('admin.roles.index', function (BreadcrumbTrail $trail) {
+    $trail->push('Danh sách vai trò', route('admin.roles.index'));
+});
+
+// Quản lý vai trò > Thông tin vai trò
+Breadcrumbs::for('admin.roles.show', function (BreadcrumbTrail $trail, $roles) {
+    $trail->parent('admin.roles.index');
+    $trail->push($roles->name ? $roles->name : '', route('admin.roles.show', $roles));
+});
+
+// Quản lý phân quyền
+Breadcrumbs::for('admin.permissions.index', function (BreadcrumbTrail $trail) {
+    $trail->push('Danh sách phân quyền', route('admin.permissions.index'));
+});
+
+// Quản lý phân quyền > Thông tin phân quyền
+Breadcrumbs::for('admin.permissions.show', function (BreadcrumbTrail $trail, $permissions) {
+    $trail->parent('admin.permissions.index');
+    $trail->push($permissions->description ? $permissions->description : '', route('admin.permissions.show', $permissions));
+});
+
+// // Quản lý thành viên
+// Breadcrumbs::for('admin.users.index', function (BreadcrumbTrail $trail) {
+//     $trail->push('Danh sách thành viên', route('admin.users.index'));
 // });
 
-// // Home > Blog > [Category]
-// Breadcrumbs::for('category', function (BreadcrumbTrail $trail, $category) {
-//     $trail->parent('blog');
-//     $trail->push($category->title, route('category', $category));
+// // Quản lý thành viên > Thông tin thành viên
+// Breadcrumbs::for('admin.users.show', function (BreadcrumbTrail $trail, $users) {
+//     $trail->parent('admin.users.index');
+//     $trail->push($users->name ? $users->name : '', route('admin.users.show', $users));
 // });
+
+// //Thông tin tài khoản
+// Breadcrumbs::for('edit-profile', function (BreadcrumbTrail $trail) {
+//     $trail->push('Thông tin tài khoản', route('edit-profile'));
+// });
+
+////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////

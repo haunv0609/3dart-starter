@@ -12,11 +12,14 @@ use eloquentFilter\ServiceProvider as FilterService;
 use eloquentFilter\Facade\EloquentFilter;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
+use haunv\artStarter\Console\starterInstall;
+
 
 class StarterServiceProvider extends ServiceProvider {
     public function boot()
     {
-        $this->laravelPermission();
+
+        $this->commands([starterInstall::class]);
 
         $this->app->register(PermissionServiceProvider::class);
         $this->app->register(LaravelNotifyServiceProvider::class);
@@ -27,13 +30,7 @@ class StarterServiceProvider extends ServiceProvider {
         $this->publishing();
 
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-
         $this->loadRoutesFrom(__DIR__.'/routes/starter.php');
-
-        $this->harumcpi();
-        $this->laravelNotify();
-        $this->filemanager();
-        $this->configBreadcrumbs();
     }
     public function register()
     {

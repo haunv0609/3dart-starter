@@ -19,6 +19,7 @@ class starterInstall extends Command
         $this->filemanagerConfig();
         $this->filemanagerPublic();
         $this->configBreadcrumbs();
+        $this->publishPackage();
         $this->haruncpi();
 
         $this->info('starter config published successfully.');

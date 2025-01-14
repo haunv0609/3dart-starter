@@ -69,7 +69,7 @@ class StarterServiceProvider extends ServiceProvider {
         ], 'admin-routes');
 
         $this->publishes([
-            __DIR__.'/../../resources/views' => resource_path('views/admin/'),
+            __DIR__.'/views' => resource_path('views/admin/'),
         ], "pr-views");
     }
 

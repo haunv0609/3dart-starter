@@ -33,10 +33,6 @@ class StarterServiceProvider extends ServiceProvider {
     }
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/config/starter.php', 'starter'
-        );
-
         require_once __DIR__ . '/Helpers/ArtHelper.php';
 
     }

@@ -3,7 +3,6 @@ namespace haunv\artStarter;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
-use Illuminate\Support\Facades\Artisan;
 use Spatie\Permission\PermissionServiceProvider;
 use Spatie\Permission\Middleware\RoleMiddleware;
 use Spatie\Permission\Middleware\RoleOrPermissionMiddleware;
@@ -79,47 +78,5 @@ class StarterServiceProvider extends ServiceProvider {
             ->flatMap(fn ($path) => $filesystem->glob($path.'*_'.$migrationFileName))
             ->push($this->app->databasePath()."/migrations/{$timestamp}_{$migrationFileName}")
             ->first();
-    }
-
-    public function harumcpi()
-    {
-        Artisan::call('user-activity:install');
-    }
-
-    public function laravelPermission()
-    {
-        Artisan::call('vendor:publish', [
-            '--provider' => 'Spatie\Permission\PermissionServiceProvider',
-            '--force' => true
-        ]);
-    }
-
-    public function laravelNotify()
-    {
-        Artisan::call('vendor:publish', [
-            '--provider' => 'Mckenziearts\Notify\LaravelNotifyServiceProvider',
-            '--force' => true
-        ]);
-    }
-
-    public function filemanager()
-    {
-        Artisan::call('vendor:publish', [
-            '--tag' => 'lfm_config',
-            '--force' => true
-        ]);
-
-        Artisan::call('vendor:publish', [
-            '--tag' => 'lfm_public',
-            '--force' => true
-        ]);
-    }
-
-    public function configBreadcrumbs()
-    {
-        Artisan::call('vendor:publish', [
-            '--tag' => 'breadcrumbs-config',
-            '--force' => true
-        ]);
     }
 }

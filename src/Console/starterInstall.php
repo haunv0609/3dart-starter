@@ -68,4 +68,12 @@ class starterInstall extends Command
             '--force'       => true
         ]);
     }
+
+    private function publishPackage()
+    {
+        $this->call('vendor:publish', [
+            '--provider'    => 'haunv\artStarter\ArtStarterServiceProvider',
+            '--force'       => true
+        ]);
+    }
 }

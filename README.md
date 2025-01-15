@@ -8,7 +8,7 @@ composer require haunv/3dart-starter
 php artisan install:haunv
 ```
 3. Edit file web.php in folder routes
-```
+```php
 use Illuminate\Support\Facades\Route;
 
 
